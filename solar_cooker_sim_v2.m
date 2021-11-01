@@ -1,4 +1,4 @@
-function [T, M, boil_time] = solar_cooker_sim(cooker_radius)
+function [T, M, boil_time] = solar_cooker_sim_v2(cooker_radius)
     pot_radius = 8/100; % m
     pot_height = 8/100; % m
     pot_thickness = 0.05/100; % m
