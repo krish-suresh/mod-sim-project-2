@@ -26,8 +26,8 @@ function [T, M, boil_time] = solar_cooker_sim(cooker_radius)
         water_temp = energyToTemperature(X(2), m_water, c_water);
         diff_temp_pot_air = air_temp - pot_temp;
         U_conv_water = (h_water*A_inner_pot) * (pot_temp - water_temp);
-        res(1) = e_pot*I*A_proj_cooker - U_conv_water - (h_air * A_outer_pot)*diff_temp_pot_air;
-        res(2) = U_conv_water + e_water*I*A_top_pot - (h_air * A_inner_pot)*(air_temp - water_temp);
+        res(1) = e_pot*I*A_proj_cooker - U_conv_water;
+        res(2) = U_conv_water + e_water*I*A_top_pot;
     end
     U_pot_0 = temperatureToEnergy(air_temp, m_pot, c_pot);
     U_water_0 = temperatureToEnergy(air_temp, m_water, c_water);
