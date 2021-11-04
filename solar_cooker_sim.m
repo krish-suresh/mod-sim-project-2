@@ -37,7 +37,7 @@ function [T, M, boil_time] = solar_cooker_sim(cooker_radius)
     M(:, 1) =  energyToTemperature(M(:, 1), m_pot, c_pot);
     M(:, 2) =  energyToTemperature(M(:, 2), m_water, c_water);
     T = T/60;
-    boil_temp = 373; % K
+    boil_temp = 363; % K
     [~, boil_ind] = max(M(1:find(M(:,2) > boil_temp, 1),2));
     boil_time = T(boil_ind);
 end
